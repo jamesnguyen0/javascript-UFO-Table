@@ -32,7 +32,7 @@ function runEnter() {
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
     // Get the value property of the input element
-    var inputValue = inputElement.property("value");
+    var inputValue = inputElement.property("value").trim().toLowerCase();
     var filteredData = tableData.filter(data => data.datetime === inputValue);
     
     console.log(filteredData)
